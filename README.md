@@ -3,21 +3,21 @@ CLI-Magento-Install-Public
 ###Use this to install Magento entirely from the command line
 
 ####Setup Database
-```php
+```bash
 mysql -u root -p 
 CREATE DATABASE [database name];
 SHOW DATABASES;
 ```
 
 ####Setup Database User
-```php
+```bash
 GRANT ALL PRIVILEGES
 ON [database name].*
 TO '[database user]'@'localhost' IDENTIFIED BY '[password]';
 FLUSH PRIVILEGES;
 ```
 ####Install Script
-```php
+```bash
 wget http://www.magentocommerce.com/downloads/assets/1.7.0.2/magento-1.7.0.2.tar.gz
 tar -zxvf magento-1.7.0.2.tar.gz 
 mv magento/* magento/.htaccess . 
