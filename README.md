@@ -1,0 +1,2 @@
+CLI-Magento-Install-Public
+==========================
