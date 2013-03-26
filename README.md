@@ -24,6 +24,12 @@ mv magento/* magento/.htaccess .
 chmod -R o+w media var 
 chmod o+w app/etc
 rm -rf magento/ magento-1.7.0.2.tar.gz
+unzip my-theme.zip
+mv theme-skin skin/frontend/default
+mv theme-app app/design/frontend/default
+mv new-layouts/CustomLayouts.xml  app/etc/modules
+mv -v new-layouts/CustomLayouts/* app/code/local ////////// FIX
+mv new-layouts/CustomLayouts -r app/code/local
 php install.php -- \
 --license_agreement_accepted "yes" \
 --locale "en_US" \
